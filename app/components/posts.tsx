@@ -2,6 +2,7 @@ async function getPosts(){
     const res = await fetch('http://localhost:4000/posts' ,{
         next:{
             revalidate: 30 // Revalidate every 60 seconds
+            // 0 would mean no caching
         }
     })
     return res.json()
