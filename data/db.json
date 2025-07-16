@@ -1,0 +1,7 @@
+{
+    "posts": [
+      { "id": "0", "title": "a title", "views": 100, "states":"posted" },
+      { "id": "2", "title": "another title", "views": 200, "states":"draft" },
+      { "id": "3", "title": "a third title", "views": 300, "states":"posted" }
+    ]
+  }
