@@ -11,15 +11,15 @@ async function getPosts(){
 export default async function Posts() {
     const posts = await getPosts()
     return ( <div className="text-white">
-        <h1 className="text-2xl mb-4">Posts</h1>
-        <ul className="list-disc pl-5">
+        <h1 className="text-4xl mb-4 text-center my-4">Posts</h1>
+        <div className="flex flex-col gap-4 cursor-pointer items-center justify-center">
             {posts.map((post:any) => (
-                <li key={post.id} className="mb-2">
-                    <h2 className="text-xl text-yellow font-bold">{post.title}</h2>
-                    <p>{post.views}</p>
-                    <p>{post.states}</p>
-                </li>
+                <div key={post.id} className="p-2 border-1 border-blue-300 border-2 rounded-md bg-slate-500 min-w-64">
+                    <h2 className="text-xl text-black font-bold capitalize">{post.title}</h2>
+                    <p className="italic font-mono">{post.views}</p>
+                    <div className="rounded w-16 h-8 flex justify-start items-start px-2">{post.states}</div>
+                </div>
             ))}
-        </ul>
+        </div>
     </div>)
 }
